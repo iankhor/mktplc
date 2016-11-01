@@ -18,6 +18,11 @@ class CartsController < ApplicationController
   # GET /carts/1
   # GET /carts/1.json
   def show
+    @total = 0
+    @cart.items.each do |item|
+      @total += item.price
+    end
+    @total
   end
 
   # GET /carts/new

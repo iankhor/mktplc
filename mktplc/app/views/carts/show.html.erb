@@ -2,7 +2,7 @@
 
 <p>
   <strong>Total:</strong>
-  <%= @cart.total %>
+  <%= @total %>
 </p>
 
 <p>
@@ -11,10 +11,12 @@
 </p>
 
 <p>
-  <strong>Paid:</strong>
+  <strong>Items:</strong>
   <% @cart.items.each do |item| %>
-    <%= item.name %>
-    <%= item.cost %>
+    <p>
+      <%= item.name %>
+      <%= item.price %>
+    </p>  
   <% end %>
 </p>
 

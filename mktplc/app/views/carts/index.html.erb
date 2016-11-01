@@ -17,7 +17,7 @@
       <tr>
         <td><%= cart.total %></td>
         <td><%= cart.paid %></td>
-        <td><%= cart.user %></td>
+        <td><%= cart.user.profile.first_name %> <%= cart.user.profile.last_name %></td>
         <td><%= link_to 'Show', cart %></td>
       </tr>
     <% end %>
