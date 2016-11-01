@@ -8,6 +8,16 @@ class ItemsController < ApplicationController
     user_signed_in? ? @items = Item.where.not(user_id: current_user.id) : @items = Item.all
   end
 
+  def sold
+    paid = Cart.where(paid: true)
+    @items = []
+    paid.each do |p|
+      p.items.each do |i|
+        @items << i if p.user_id == current_user.id 
+      end
+    end
+  end
+
   def my_items
     @items = current_user.items.all
   end

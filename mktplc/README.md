@@ -24,3 +24,7 @@ Making a pre-assignment project to make sure I'm ready.
 - ItemtoCart (belongs to :sale, belongs to :item)
   - cart_id
   - item_id  
+
+- paid 
+  cart where paid == true
+  ItemtoCart where Item.user_id == current_use  
