@@ -8,6 +8,13 @@ class CartsController < ApplicationController
     @carts = current_user.carts.all
   end
 
+  def pay
+    @cart = Cart.find(params[:cart])
+    @cart.paid = true
+    @cart.save
+    redirect_to root_path
+  end
+
   # GET /carts/1
   # GET /carts/1.json
   def show

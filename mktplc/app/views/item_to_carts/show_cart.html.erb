@@ -19,3 +19,5 @@
 </table>
 
 <h2>Total Cost: <%= @cart.total %></h2>
+
+<%= link_to "Pay", cart_pay_path(cart: @cart) %>
