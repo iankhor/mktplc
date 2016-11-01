@@ -1,0 +1,21 @@
+<h1><%= current_user.email %>'s Cart</h1>
+<table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>price</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cart.items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<h2>Total Cost: <%= @cart.total %></h2>

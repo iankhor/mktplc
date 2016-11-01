@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :profiles
   root 'items#index'
   get 'my_items', to: 'items#my_items'
+  get 'my_cart', to: 'item_to_carts#show_cart'
+  get 'add_to_cart', to: 'item_to_carts#add_to_cart'
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -11,9 +11,16 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @cart.user %>
+  <strong>Paid:</strong>
+  <% @cart.items.each do |item| %>
+    <%= item.name %>
+    <%= item.cost %>
+  <% end %>
 </p>
 
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
+<p>
+  <strong>User:</strong>
+  <%= @cart.user.profile.first_name %>
+</p>
+
 <%= link_to 'Back', carts_path %>
