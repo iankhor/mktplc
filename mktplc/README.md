@@ -16,11 +16,10 @@ Making a pre-assignment project to make sure I'm ready.
   - name
   - price
 
-- Sale (belongs to: user, has_many :items through saletoitem )
-  - seller (user_id)
+- Cart (belongs to: user, has_many :items through saletoitem )
   - buyer (user_id)
   - total
 
-- SaleToItem (belongs to :sale, belongs to :item)
-  - sale_id
+- ItemtoCart (belongs to :sale, belongs to :item)
+  - cart_id
   - item_id  

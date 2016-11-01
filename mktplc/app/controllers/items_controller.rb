@@ -1,11 +1,11 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:edit, :update, :destroy, :new, :create ]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy, :new, :create, :my_items ]
 
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    user_signed_in? ? @items = Item.where.not(user_id: current_user.id) : @items = Item.all
   end
 
   def my_items

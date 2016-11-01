@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :items
   resources :profiles
-  root 'static_pages#home'
+  root 'items#index'
   get 'my_items', to: 'items#my_items'
 
   devise_for :users
