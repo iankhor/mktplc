@@ -19,6 +19,7 @@ Making a pre-assignment project to make sure I'm ready.
 - Cart (belongs to: user, has_many :items through saletoitem )
   - buyer (user_id)
   - total
+  - paid
 
 - ItemtoCart (belongs to :sale, belongs to :item)
   - cart_id

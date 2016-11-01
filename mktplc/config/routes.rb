@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :carts, except: [:destroy, :edit]
   resources :items
   resources :profiles
   root 'items#index'
