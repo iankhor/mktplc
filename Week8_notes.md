@@ -166,5 +166,23 @@ To testa  valid routes to make sure it goes to the direct controller
 Use this to make requests to websites / your app to check the response. 
 "https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb" pings radiohead on the spotify API, for instance
 
+## Thursday
+## Devise
+Used to allow users to sign in and sign out. 
+Authentication - proving who you are
+
+## Rolify
+Ading roles to users - eg. admin, publisher, user, 
+
+Can integrate with CanCanCan to assign roles and abilities. 
+eg. an admin might be able to update
+
+add devise, rolify and cancancan
+- create a new User model (rails g devise User)
 
 
+## Guest Speaker - Shannon Murdoch - UX at WebJet
+
+UX For Devs
+
+ 
