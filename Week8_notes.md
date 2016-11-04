@@ -80,6 +80,8 @@ Single routes
 
 `get 'profile', to: 'users#show'`
 
+
+
 ## NEsted Routes
 
 localhost/courses/3/modules/4
@@ -185,4 +187,15 @@ add devise, rolify and cancancan
 
 UX For Devs
 
- 
+## Friday - Rails Mailers and Contact Forms
+
+Can use a mailer to automate email sends.
+
+Comment out ERB sections by putting a hash before the = symbol:
+<%= code %>
+<%#= code wont run %>
+
+Mailer views are like normal views. Use these to construct views for plain text and HTML emails.
+
+source ~/.bash_profile to reload bash after changing env variables
+
