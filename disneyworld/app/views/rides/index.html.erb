@@ -3,6 +3,7 @@
 <h2>Buy Tickets</h2>
 <p>
   <%= link_to 'Buy Water Ticket', buy_ticket_rides_path(ticket_type: :water) %><br/>
+  <%= link_to 'Buy Magic Kingdom Ticket', buy_ticket_rides_path(ticket_type: :magic_kingdom) %><br/>
   <%= link_to 'Buy Hopper Ticket', buy_ticket_rides_path(ticket_type: :hopper) %><br/>
   <%= link_to 'Hire that man!', hire_rides_path %></br>
 
@@ -10,14 +11,14 @@
 </p>
 <% if user_signed_in? %>
   <p>
+    Citizen? <%= current_user.has_role? :citizen %><br/>
     Guest? <%= current_user.has_role? :guest %><br/>
+    Magic Kingdom? <%= current_user.has_role? :magic_kingdom %><br/>
     Water? <%= current_user.has_role? :water %><br/>
     Hopper? <%= current_user.has_role? :hopper %><br/>
     Staff? <%= current_user.has_role? :staff %><br/>
   </p>
-<% end %>
-
-<h1>Rides</h1>
+<% end %> 
 
 <table>
   <thead>

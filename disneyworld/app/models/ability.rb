@@ -12,10 +12,10 @@ class Ability
       can :ride, :all
       can :enter_staff_buildings
     else
-      can :ride, Ride, park: :magic_kingdom if user.has_any_role? :magic_kingdom, :hopper
-      can :ride, Ride, park: :animal_kingdom if user.has_any_role? :animal_kingdom, :hopper
-      can :ride, Ride, park: :studios if user.has_any_role? :studios, :hopper
-      can :ride, Ride, park: :water if user.has_role? :water
+      can :read, Ride, park: :magic_kingdom if user.has_any_role? :magic_kingdom, :hopper
+      can :read, Ride, park: :animal_kingdom if user.has_any_role? :animal_kingdom, :hopper
+      can :read, Ride, park: :studios if user.has_any_role? :studios, :hopper
+      can :read, Ride, park: :water if user.has_role? :water
     end
     #
     # The first argument to `can` is the action you are giving the user

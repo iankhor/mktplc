@@ -12,17 +12,19 @@ class User < ApplicationRecord
   end
 
   def reset_roles
-    self.remove_role :hopper
-    self.remove_role :water
-    self.remove_role :staff
+    remove_role :hopper
+    remove_role :water
+    remove_role :staff
+    remove_role :magic_kingdom
   end 
   
   def buy_ticket(options)
     add_role :guest
     park = options[:park]
-    #add_role park if park.present? && Ride.parks.include?(park)
+    add_role park if park.present? && Ride.parks.include?(park)
     add_role :hopper if options[:park] == "hopper"
     add_role :water if options[:park] == "water"
+    add_role :magic_kingdom if options[:park] == "magic_kingdom"
   end
 
   private
